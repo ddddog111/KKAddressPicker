@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G4Y-Td-Hmg">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="41m-da-qHE">
+            <objects>
+                <navigationController id="G4Y-Td-Hmg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="hq2-Dv-7ma">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="L3J-cC-yaM" kind="relationship" relationship="rootViewController" id="gma-E0-vs0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ImI-az-9no" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-414" y="243"/>
+        </scene>
+        <!--新增地址-->
+        <scene sceneID="39V-Kr-Zll">
+            <objects>
+                <viewController id="L3J-cC-yaM" customClass="ViewController" customModule="AddressPickerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mhO-62-kN5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aep-J0-3KD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1YN-2R-BXw">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pfI-Jt-SZr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="L3J-cC-yaM" id="yBh-E0-5Gb"/>
+                                    <outlet property="delegate" destination="L3J-cC-yaM" id="7IX-a8-9L0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pfI-Jt-SZr" secondAttribute="trailing" id="UyD-Ss-rab"/>
+                            <constraint firstItem="Aep-J0-3KD" firstAttribute="top" secondItem="pfI-Jt-SZr" secondAttribute="bottom" id="pj5-X4-ykB"/>
+                            <constraint firstItem="pfI-Jt-SZr" firstAttribute="leading" secondItem="1YN-2R-BXw" secondAttribute="leading" id="xFP-ao-CBA"/>
+                            <constraint firstItem="pfI-Jt-SZr" firstAttribute="top" secondItem="mhO-62-kN5" secondAttribute="bottom" id="yyi-NL-7H5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="新增地址" id="spm-DZ-7ep"/>
+                    <connections>
+                        <outlet property="mainTable" destination="pfI-Jt-SZr" id="BpG-WG-kcP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNq-C2-lWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="332" y="243"/>
+        </scene>
+    </scenes>
+</document>
